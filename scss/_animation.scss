@@ -1,0 +1,15 @@
+.translate-right-box {
+	transform: translateX(400%);
+	transition: transform 0.5s ease;
+	&.show {
+		transform: translateX(0%);
+	}
+}
+
+.translate-left-box {
+	transform: translateX(-400%);
+	transition: transform 0.5s ease;
+	&.show {
+		transform: translateX(0%);
+	}
+}

@@ -1,0 +1,396 @@
+* {
+	box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
+}
+a,
+a:hover {
+	text-decoration: none;
+	color: inherit;
+}
+@import 'config';
+@import 'utils';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	background-color: black;
+	color: gray;
+	overflow-x: hidden;
+}
+
+// Navbar
+header {
+	display: none;
+	&.active {
+		display: block;
+	}
+	position: fixed;
+	width: 100%;
+	background-color: rgba(22, 21, 21, 0.1);
+	padding: 1.5rem 0;
+
+	nav {
+		ul {
+			display: flex;
+			justify-content: space-evenly;
+			li {
+				list-style: none;
+				&:hover {
+					color: white;
+				}
+			}
+		}
+	}
+}
+
+.home-screen {
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	h1 {
+		font-size: 3vw;
+		span {
+			color: red;
+			font-size: 7vw;
+		}
+	}
+	.down-arrow {
+		position: absolute;
+		left: 47%;
+		bottom: 0;
+		font-size: 4rem;
+		opacity: 0.3;
+		cursor: pointer;
+	}
+}
+.tile-screen {
+	position: relative;
+	.up-arrow {
+		position: absolute;
+		left: 47%;
+		font-size: 4rem;
+		opacity: 0.3;
+		cursor: pointer;
+		&:hover {
+			transform: scale(1.05);
+		}
+	}
+	height: 100vh;
+	.container {
+		height: 100%;
+	}
+	.grid-container {
+		padding: 6rem 0 4rem 0;
+		width: 100%;
+		height: 100%;
+		grid-gap: 1rem;
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		grid-template-rows: repeat(12, 1fr);
+		.tile {
+			&:hover {
+				transform: scale(1.02);
+				cursor: pointer;
+			}
+		}
+		.projects-tile {
+			position: relative;
+			background-color: gray;
+			grid-area: 1/1/7/10;
+			overflow: hidden;
+			h1 {
+				position: absolute;
+				bottom: -6%;
+				left: -3%;
+				color: black;
+				font-size: 10vw;
+			}
+		}
+		.skills-tile {
+			position: relative;
+			background-color: red;
+			grid-area: 1/10/13/13;
+			overflow: hidden;
+			h1 {
+				position: absolute;
+				bottom: 20%;
+				right: -40%;
+				color: black;
+				font-size: 10vw;
+				transform: rotate(-90deg);
+			}
+		}
+		.social-tile {
+			background-color: red;
+			color: black;
+			overflow: hidden;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			&.facebook-tile {
+				background-color: gray;
+				font-size: 3vw;
+				grid-area: 9/1/11/2;
+			}
+			&.instagram-tile {
+				font-size: 3vw;
+				grid-area: 11/1/13/2;
+			}
+			&.free-code-camp-tile {
+				grid-area: 11/2/13/3;
+				font-size: 3vw;
+			}
+			&.github-tile {
+				background-color: gray;
+				grid-area: 9/8/13/10;
+				font-size: 8vw;
+			}
+			&.linkedin-tile {
+				grid-area: 9/6/13/8;
+				font-size: 8vw;
+			}
+		}
+		.contact-tile {
+			position: relative;
+			background-color: red;
+			color: black;
+			overflow: hidden;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			grid-area: 7/6/9/10;
+			h2 {
+				font-size: 5vw;
+				position: absolute;
+			}
+		}
+		.whatsapp-tile {
+			background-color: red;
+			color: black;
+			overflow: hidden;
+			font-size: 3vw;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			grid-area: 9/2/11/3;
+		}
+	}
+}
+.project-tile-screen {
+	.back-button {
+		margin-top: 2rem;
+	}
+	.grid-container {
+		padding: 1rem 0 4rem 0;
+		display: flex;
+		flex-direction: column;
+		.tile {
+			padding: 1rem;
+			position: relative;
+			margin-bottom: 1rem;
+			ul {
+				padding: 0;
+				list-style-type: none;
+			}
+			background: red;
+			color: black;
+			h2 {
+				font-size: 3rem;
+			}
+			li {
+				font-size: 2rem;
+				display: flex;
+				justify-content: space-between;
+				a:hover {
+					transform: scale(1.02);
+					cursor: pointer;
+				}
+				i:hover {
+					transform: scale(1.3);
+					cursor: pointer;
+				}
+			}
+		}
+		.mern-stack-tile {
+			grid-area: 1/1/7/6;
+		}
+		.plain-tile {
+			grid-area: 1/8/13/13;
+			background-color: gray;
+		}
+		.react-tile {
+			grid-area: 9/1/13/5;
+			background-color: gray;
+		}
+		.node-tile {
+			grid-area: 7/5/13/8;
+		}
+	}
+}
+
+.project-description-tile-screen {
+	position: relative;
+	height: 100vh;
+	.container {
+		height: 100%;
+	}
+	.back-button {
+		position: absolute;
+		top: 1rem;
+	}
+
+	.grid-container {
+		padding: 6rem 0 4rem 0;
+		width: 100%;
+		height: 100%;
+		grid-gap: 1rem;
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		grid-template-rows: repeat(12, 1fr);
+		.tile {
+			position: relative;
+		}
+		.image-tile {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			grid-area: 1/1/13/5;
+			background-color: black;
+		}
+		.description-tile {
+			padding: 3rem 1rem;
+			grid-area: 1/5/13/13;
+			h2 {
+				color: red;
+				margin: 0 0 2rem 0;
+			}
+			span {
+				color: red;
+			}
+			i {
+				padding: 2rem 0;
+				color: red;
+				font-size: 3rem;
+				&:last-child {
+					padding: 0 0 0 1rem;
+				}
+				&:hover {
+					transform: scale(1.1);
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}
+.contact-tile-screen {
+	height: 100vh;
+	.back-button {
+		position: absolute;
+		top: 1rem;
+	}
+	.container {
+		height: 100%;
+	}
+	.grid-container {
+		padding: 6rem 0 4rem 0;
+		width: 100%;
+		height: 100%;
+		grid-gap: 1rem;
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		grid-template-rows: repeat(12, 1fr);
+		.tile {
+			position: relative;
+		}
+		.contact-form-tile {
+			grid-area: 1/1/13/7;
+		}
+		.address-tile {
+			grid-area: 1/8/13/13;
+			color: black;
+			background-color: red;
+			padding: 1rem;
+			position: relative;
+			i {
+				font-size: 2rem;
+				margin-bottom: 1rem;
+			}
+			// .side-text {
+			// 	text-transform: capitalize;
+			// 	transform: rotate(-90deg);
+			// 	font-size: 10vw;
+			// 	position: absolute;
+			// 	top: 30%;
+			// 	right: -35%;
+			// }
+		}
+	}
+}
+.skills-tile-screen {
+	height: 100vh;
+	.back-button {
+		position: absolute;
+		top: 1rem;
+	}
+	.container {
+		height: 100%;
+	}
+	.grid-container {
+		padding: 6rem 0 4rem 0;
+		width: 100%;
+		height: 100%;
+		grid-gap: 1rem;
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		grid-template-rows: repeat(12, 1fr);
+		.tile {
+			position: relative;
+			background-color: black;
+			color: red;
+			font-size: 8vw;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			&.html {
+				color: black;
+				background-color: red;
+				grid-area: 1/1/5/4;
+			}
+			&.css {
+				grid-area: 1/4/5/7;
+			}
+			&.js {
+				grid-area: 1/7/5/10;
+			}
+			&.sass {
+				grid-area: 1/10/5/13;
+			}
+			&.node {
+				color: black;
+				background-color: red;
+				grid-area: 5/1/9/4;
+			}
+			&.react {
+				grid-area: 5/4/9/7;
+			}
+			&.git {
+				grid-area: 5/7/9/10;
+			}
+			&.python {
+				grid-area: 5/10/9/13;
+			}
+			&.aws {
+				grid-area: 9/1/13/4;
+			}
+		}
+	}
+}
+
+.show-sm {
+	display: none;
+}
+@import 'animation';
+@import 'media';

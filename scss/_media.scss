@@ -1,0 +1,122 @@
+@media (max-width: 800px) {
+	.hide-sm {
+		display: none;
+	}
+	.show-sm {
+		display: block;
+	}
+	.screens {
+		.home-screen {
+			padding-left: 1rem;
+			display: flex;
+			justify-content: left;
+			align-items: left;
+			h1 {
+				font-size: 6vw;
+				span {
+					color: red;
+					font-size: 10vw;
+				}
+			}
+		}
+	}
+
+	.tile-screen {
+		.grid-container {
+			grid-gap: 0.5rem;
+			.projects-tile {
+				grid-area: 1/1/7/10;
+				h1 {
+					bottom: -6%;
+					left: -3%;
+					color: black;
+					font-size: 10vw;
+				}
+			}
+			.skills-tile {
+				grid-area: 1/10/7/13;
+				h1 {
+					bottom: 20%;
+					right: -40%;
+					font-size: 10vw;
+					transform: rotate(-90deg);
+				}
+			}
+			.social-tile {
+				&.facebook-tile {
+					font-size: 6vw;
+					grid-area: 9/1/11/4;
+				}
+				&.instagram-tile {
+					font-size: 6vw;
+					grid-area: 11/1/13/4;
+				}
+				&.free-code-camp-tile {
+					grid-area: 11/4/13/7;
+					font-size: 6vw;
+				}
+				&.github-tile {
+					grid-area: 10/7/13/13;
+					font-size: 10vw;
+				}
+				&.linkedin-tile {
+					grid-area: 7/7/10/13;
+					font-size: 10vw;
+				}
+			}
+			.contact-tile {
+				grid-area: 7/1/9/7;
+			}
+			.whatsapp-tile {
+				grid-area: 9/4/11/7;
+			}
+		}
+	}
+
+	.contact-tile-screen {
+		.grid-container {
+			.contact-form-tile {
+				grid-area: 5/1/13/13;
+			}
+			.address-tile {
+				grid-area: 1/1/5/13;
+				display: flex;
+				justify-content: space-between;
+			}
+		}
+	}
+}
+
+@media (max-width: 600px) {
+	.project-tile-screen {
+		.grid-container {
+			.tile {
+				h2 {
+					font-size: 2rem;
+				}
+				li {
+					font-size: 1rem;
+				}
+			}
+		}
+	}
+
+	.project-description-tile-screen {
+		.grid-container {
+			.image-tile {
+				display: none;
+			}
+			.description-tile {
+				padding: 1rem 1rem;
+				grid-area: 1/1/13/13;
+			}
+		}
+	}
+	.skills-tile-screen {
+		.grid-container {
+			.tile {
+				font-size: 12vw;
+			}
+		}
+	}
+}
