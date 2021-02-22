@@ -80,35 +80,6 @@ body {
   overflow-x: hidden;
 }
 
-header {
-  display: none;
-  position: fixed;
-  width: 100%;
-  background-color: rgba(22, 21, 21, 0.1);
-  padding: 1.5rem 0;
-}
-
-header.active {
-  display: block;
-}
-
-header nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-}
-
-header nav ul li {
-  list-style: none;
-}
-
-header nav ul li:hover {
-  color: white;
-}
-
 .home-screen {
   height: 100vh;
   width: 100%;
@@ -332,11 +303,12 @@ header nav ul li:hover {
 }
 
 .project-tile-screen .back-button {
-  margin-top: 2rem;
+  position: absolute;
+  top: 1rem;
 }
 
 .project-tile-screen .grid-container {
-  padding: 1rem 0 4rem 0;
+  padding: 6rem 0 4rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
